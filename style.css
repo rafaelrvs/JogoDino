@@ -1,31 +1,80 @@
 *{
     margin: 0;
     padding: 0;
-
-}
-body{
-    display: flex;
-    background: rgb(139, 145, 222);
-}
-
-#game{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
    
-    width: 1530px;
-    height: 500px;
-    border: 1px solid black;
-    margin: 3px;
-    overflow: hidden;
-    
 
 }
-#personagem{
+
+#planoDeFundo{
+    position: fixed;
+    background-color:rgba(255, 0, 183, 0.355);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#game{
+    display: flex;
+    position: fixed;
+    justify-content:flex-start;
+    align-items:flex-start;
+    height: 50%;
+    width: 50%;
+    border: solid 2px black;
+    background-color: rgba(128, 128, 128, 0.378);
+    overflow: hidden;
+}
+#texto{
+    display: none;
+    position: absolute;
+    margin-left: 27%;
+    margin-top: 3%;
+    width: 45%;
+    background-color:  rgb(71, 0, 147);
+    padding: 1%;
+    text-align: center;
+    color: rgb(248, 245, 245);
+    border-radius: 20px;
+    text-shadow: 5px 5px 5px black ;
+    box-shadow: 10px 10px 25px black;
+}
+#texto2{
+  
+    position: fixed;
+    font-size: 90pt;
+    margin-top: 0.90em;
+    margin-left: 2.9em;
+    color: rgb(71, 0, 147);
+    text-shadow: 5px 5px 5px black ;
     
+}
+.btn{
+ 
+    position: fixed;
+    padding: 1%;
+    margin-top: 20%;
+    margin-left:19%;
+    width: 15em;
+    justify-content: center;
+    background-color:  rgb(71, 0, 147);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 10px 10px 25px black;
+    text-shadow: 5px 5px 5px black ;
+}
+
+
+#personagem{
+    position: fixed;
     width: 20px;
     height: 50px;
-    background-color: rgb(97, 224, 238);
+    background-color:  rgb(71, 0, 147);
     position: relative;
-    top: 450px;
-    left: 50px;
+    top: 86%;
+    margin-left: 2px;
     border-radius: 2px;
     border:1px solid black;
     
@@ -36,75 +85,26 @@ animation: personagem 600ms  ease-out;
 }
 
 @keyframes personagem{
-    0%{top:430px;}
-    70%{top: 390px;}
-    100%{top: 430px;}
+    0%{top:86%;}
+    70%{top: 50%;}
+    100%{top: 86%;}
 
 }
 #quadrado{
+    position: fixed;
     width: 20px;
     height: 20px;
-    background-color:aquamarine;
+    background-color: rgb(71, 0, 147);
     position: relative;
     right: 0;
-    
-    top: 430px;
+    top: 95%;
     left: 1530px;
-    animation: quadrado 1500ms infinite linear;
+    animation: quadrado 2500ms infinite linear;
+
 }
 @keyframes quadrado{
     0%{left:1800px;}
     100%{left: -30px;}
 }
 
-#texto{
-    position:relative;
-    font-family: Arial, Helvetica, sans-serif;
-    font: normal 20pt;
-    color: rgb(7, 11, 65);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    right:4%;
-    width: 1800px;
-    right: 5%;   
-    
-}
-#texto2{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 4%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 40vh;
-    color: red;
-}
 
-
-.btn{
-    position:relative;
-    display: flex;
-    left: 50%;
-    padding: 10px;
-    height: 4em;
-    width: 100px;
-    border-radius: 5px;
-    border:  none;
-    justify-content: center;
-    align-items: center;
-    background-image:purple;
-}
-#btn:hover{
-    cursor: pointer;
-    background:linear-gradient(45deg,rgb(89, 128, 221),rgb(114, 232, 130));
-}
-
-#pontuacao{
-    position: relative;
-    color: black;
-   display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    
-}

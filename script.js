@@ -26,8 +26,7 @@ var testarColisao = setInterval(function(){
         window.getComputedStyle(quadrado).getPropertyValue('left')
     )
 
-    if(LocalizacaoQuadrado<20&& LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >=430){
-        
+    if(LocalizacaoQuadrado<20&& LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 250){
         perdeu()
         
     }
@@ -36,10 +35,11 @@ var testarColisao = setInterval(function(){
 function perdeu(){
     quadrado.style.animation = 'none'
     personagem.style.display = 'none'
+
     var texto = document.getElementById('texto')
     var texto2 = document.getElementById('texto2').innerHTML="x"
     texto.innerHTML ='Você perdeu'
-    texto.style.background=  'linear-gradient(45deg, red, white)'
+    texto.style.display='grid'
     var btn = document.querySelector('.btn')
     btn.style.display = 'flex'
     if(btn == true){
