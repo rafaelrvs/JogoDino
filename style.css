@@ -27,6 +27,12 @@
     background-color: rgba(128, 128, 128, 0.378);
     overflow: hidden;
 }
+#pontos{
+    position: fixed;
+    color: black;
+    margin: 10px;
+
+}
 #texto{
     display: none;
     position: absolute;
@@ -42,7 +48,7 @@
     box-shadow: 10px 10px 25px black;
 }
 #texto2{
-  
+    
     position: fixed;
     font-size: 90pt;
     margin-top: 0.90em;
@@ -52,7 +58,7 @@
     
 }
 .btn{
- 
+    
     position: fixed;
     padding: 1%;
     margin-top: 20%;
@@ -99,12 +105,36 @@ animation: personagem 600ms  ease-out;
     right: 0;
     top: 95%;
     left: 1530px;
-    animation: quadrado 2500ms infinite linear;
+    animation: quadrado 5000ms infinite linear;
 
 }
+#btnUp{
+    display: none;
+}
+
 @keyframes quadrado{
     0%{left:1800px;}
     100%{left: -30px;}
 }
-
+@media (max-width:400px){
+    .btn{
+       margin-top:75%;
+       height: 25px;
+       width: 85px;
+        margin-left: 15%;
+    }
+    
+    #btnUp{
+        position: fixed;
+        padding: 5px;
+        width: 150px;
+        border-radius: 20px;
+        background-color: rgb(71, 0, 147);
+        text-align: center;
+        bottom:17%;
+        margin-left:5%;
+        ;
+    }
+    
+}
 

@@ -1,8 +1,10 @@
 const personagem = document.querySelector('#personagem')
 const quadrado = document.querySelector('#quadrado')
 var btn = document.querySelector('.btn')
+var pontuacao = document.querySelector('#pontos')
 
-let contadorDeTeclas = {};
+
+
 
 
 btn.style.display= 'none'
@@ -26,7 +28,7 @@ var testarColisao = setInterval(function(){
         window.getComputedStyle(quadrado).getPropertyValue('left')
     )
 
-    if(LocalizacaoQuadrado<20&& LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 250){
+    if(LocalizacaoQuadrado<7&& LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >=300 || LocalizacaoQuadrado<7&& LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 285 ){
         perdeu()
         
     }
@@ -38,6 +40,8 @@ function perdeu(){
 
     var texto = document.getElementById('texto')
     var texto2 = document.getElementById('texto2').innerHTML="x"
+    pontuacao.style.display='none'
+    pontuacao.innerHTML=""
     texto.innerHTML ='Você perdeu'
     texto.style.display='grid'
     var btn = document.querySelector('.btn')
