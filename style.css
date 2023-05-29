@@ -1,166 +1,86 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
-   
-
 }
-@media(max-width:1000px){
 #planoDeFundo{
-    position: fixed;
-    background-color:rgba(255, 0, 183, 0.355);
+    position:relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: bisque;
     height: 100vh;
-    width:  100%;
+    
 }
 #game{
-    display: flex;
-    position: absolute;
-    justify-content:space-between;
-    align-items:center;
-    height: 50%;
-    width: 50%;
-    border: solid 2px black;
-    background-color: rgba(128, 128, 128, 0.378);
+    display: block;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 1200px;
     overflow: hidden;
+    border: 2px solid black;
+    
 }
 #pontuacao{
-    position: absolute;
-    color: black;
-    top: 10px;
-    right: 10px;
-
+    display: flex;
+    justify-content:flex-end;
+    margin: 10px;
+    color:black;
 }
-#texto{
-    display: none;
-    position: absolute;
-    top: 15px;
-    margin-left:200px;
-    width: 45%;
-    background-color:  rgb(71, 0, 147);
-    padding: 1%;
-    text-align: center;
-    color: rgb(248, 245, 245);
-    border-radius: 20px;
-    text-shadow: 5px 5px 5px black ;
-    box-shadow: 10px 10px 25px black;
-}
-#texto2{
-    
-    position: absolute;
-    font-size: 90pt;
-    margin-left: 340px;
-    color: rgb(71, 0, 147);
-    text-shadow: 5px 5px 5px black ;
-    
-}
-.btn{
-    display: none;
-    position: fixed;
-    padding: 1%;
-    margin-top: 20em;
-    margin-left:280px;
-    width: 15em;
-    justify-content: center;
-    background-color:  rgb(71, 0, 147);
-    border-radius: 20px;
-    border: none;
-    box-shadow: 10px 10px 25px black;
-    text-shadow: 5px 5px 5px black ;
-}
-
-
 #personagem{
-    position: absolute;
-    width: 20px;
+    position: fixed;
     height: 50px;
-    background-color:  rgb(71, 0, 147);
-    top: 86%;
-    margin-left: 2px;
-    border-radius: 2px;
-    border:1px solid black;
+    width: 20px;
+    background-color: blueviolet;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 412px;
+    margin-left: 10px;
     
 }
-
-.animar{
-animation: personagem 600ms  ease-out;
-}
-
 @keyframes personagem{
-    0%{top:86%;}
-    70%{top: 50%;}
-    100%{top: 86%;}
-
+    0%{bottom:200px;}
+    20%{top: 210;}
+    30%{top: 220;}
+    40%{top: 270;}
+    50%{top: 340;}
+    60%{top: 340;}
+    70%{top: 270;}
+    80%{top: 215;}
+    90%{top: 210;}
+    100%{top: 200;}
+    
+    
+}
+.animar{
+     animation: personagem 1000ms  ease-out;
 }
 #quadrado{
     position: absolute;
-    width: 20px;
+    flex-wrap: wrap;
     height: 20px;
-    background-color: rgb(71, 0, 147);
-    right: 0;
-    bottom: 1px;
-    left: 1530px;
-    animation: quadrado 1500ms infinite linear;
-
+    width: 20px;
+    background-color: blue;
+    margin-top: 442px;
+    margin-left:390px;
+    animation: quadrado 5000ms infinite linear;
 }
-
 
 @keyframes quadrado{
-    0%{left:1800px;}
-    100%{left: -30px;}
+    0%{left:1000px;}
+    100%{left:-1100px;}
 
     
 }
-
-}
-#quadrado2{
-    display: none;
+.btn{   
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: rgb(71, 0, 147);
-    right: 0;
-    bottom: 1px;
-    left: 1530px;
-    animation: quadrado 2000ms infinite linear;
-
+    display: none;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-radius:10px ;
+    border:none;
+    box-shadow: 10px 10px 10px black;
+    color: azure;
+    background-color: blueviolet;
+    margin-top: 350px;
+    margin-left: 590px;  
 }
-
-
-
-@media (min-width:300px){
-    
-    
-    #game{
-        justify-content: space-between;
-        align-items: center;
-
-    }
-    #texto{
-        margin-left: 45px;
-        margin-top: 10px;
-    }
-    
-    #texto2{
-        margin-left: 55px;
-        margin-top: 10px;
-        font-size:90pt;
-    }
-    .btn{
-       margin-top:270px;
-       height: 25px;
-       width: 85px;
-        margin-left: 55px;
-    }    
-    #pontuacao{
-        
-        position: absolute;
-        top: 3px;
-        color: blue;
-        right: 10px;
-    }
-}
-
