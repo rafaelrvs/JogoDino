@@ -28,8 +28,8 @@ var testarColisao = setInterval(function () {
   );
 
   if (
-    (LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 60) ||
-    LocalizacaoPersonagem >= 200 && LocalizacaoQuadrad2 < 20&& LocalizacaoQuadrad2 >0 ||LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 200){
+    (LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >=390 )
+   ){
     perdeu();
   }
   else {
