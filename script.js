@@ -14,24 +14,25 @@ const jump = () => {
 window.getComputedStyle(quadrado).getPropertyValue("jump");
 document.addEventListener("keydown", jump);
 
-var testarColisao = setInterval(function () {
-  var LocalizacaoPersonagem = parseInt(
+let testarColisao = setInterval(function () {
+  let LocalizacaoPersonagem = parseInt(
     window.getComputedStyle(personagem).getPropertyValue("top")
   );
 
-  var LocalizacaoQuadrado = parseInt(
+  let LocalizacaoQuadrado = parseInt(
     window.getComputedStyle(quadrado).getPropertyValue("left")
   );
 
-  var LocalizacaoQuadrad2 = parseInt(
+  let LocalizacaoQuadrad2 = parseInt(
     window.getComputedStyle(quadrado2).getPropertyValue("left")
   );
 
-  if (
-    (LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 100) ||
-    LocalizacaoPersonagem > 20 && LocalizacaoQuadrad2 > 0&& LocalizacaoQuadrad2 >=100 ||LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 100){
+  if (LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 100 ||
+    LocalizacaoPersonagem > 20 && LocalizacaoQuadrad2 > 0 && LocalizacaoQuadrad2 >=100||
+    LocalizacaoQuadrado < 20 && LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 100)
+    {
     perdeu();
-  }
+    }
   else {
 
             pontos = pontos+1

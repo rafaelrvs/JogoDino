@@ -12,12 +12,12 @@
     overflow: hidden; 
 }
 #game{
+    overflow: hidden;
     position: absolute;
     display: block;
     flex-wrap: wrap;
     height: 500px;
     width: 1200px;
-    overflow: hidden;
     border: 2px solid black;
     
 }
