@@ -28,8 +28,8 @@ var testarColisao = setInterval(function () {
   );
 
   if (
-    (LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 60) ||
-    LocalizacaoPersonagem >= 200 && LocalizacaoQuadrad2 < 20&& LocalizacaoQuadrad2 >0 ||LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 200){
+    (LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 100) ||
+    LocalizacaoPersonagem > 20 && LocalizacaoQuadrad2 > 0&& LocalizacaoQuadrad2 >=100 ||LocalizacaoQuadrado < 20 &&LocalizacaoQuadrado > 0 && LocalizacaoPersonagem >= 100){
     perdeu();
   }
   else {
@@ -38,19 +38,18 @@ var testarColisao = setInterval(function () {
             pontuacao.innerHTML = pontos
             console.log(pontos)
 
-            if(pontos>1000){
+            if(pontos>=1000){
             fase2()
             }
           }
 }, 10);
 
 function perdeu() {
+  quadrado.style.display="none";
   quadrado.style.animation = "none";
   personagem.style.display = "none";
   quadrado2.style.display = "none";
   var texto = document.getElementById("texto");
-  var texto2 = document.getElementById("texto2");
-  texto2.innerHTML = "x";
   pontuacao.style.display = "none";
   texto.innerHTML = "Você perdeu";
   texto.style.display = "grid";
@@ -67,6 +66,6 @@ function atualizacao() {
   }, 5000);
 }
 function fase2(){
-    quadrado2.style.display='grid' 
-
+    quadrado2.style.display='flex' 
+    
 }

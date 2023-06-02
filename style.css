@@ -3,15 +3,16 @@
     padding: 0;
 }
 #planoDeFundo{
-    position:relative;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: bisque;
     height: 100vh;
-    
+    overflow: hidden; 
 }
 #game{
+    position: absolute;
     display: block;
     flex-wrap: wrap;
     height: 500px;
@@ -39,37 +40,43 @@
 }
 @keyframes personagem{
     0%{bottom:200px;}
-    20%{top: 210;}
-    30%{top: 220;}
-    40%{top: 270;}
-    50%{top: 340;}
-    60%{top: 340;}
-    70%{top: 270;}
-    80%{top: 215;}
-    90%{top: 210;}
-    100%{top: 200;}
+
+    100%{bottom: 200px;}
     
     
 }
 .animar{
-     animation: personagem 1000ms  ease-out;
+     animation: personagem 200ms  ease-out;
 }
 #quadrado{
+    display: flex;
     position: absolute;
     flex-wrap: wrap;
     height: 20px;
     width: 20px;
     background-color: blue;
     margin-top: 442px;
-    margin-left:390px;
-    animation: quadrado 5000ms infinite linear;
+    animation: quadrado 2000ms infinite linear;
+}
+#quadrado2{
+    position: fixed;
+    display: none;
+    flex-wrap: wrap;
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    margin-top: 442px;
+    animation: quadrado2 3000ms infinite linear;
 }
 
-@keyframes quadrado{
-    0%{left:1000px;}
-    100%{left:-1100px;}
 
-    
+@keyframes quadrado{
+    0%{left:1370px;}
+    100%{left:-2px;}
+}
+@keyframes quadrado2{
+    0%{left:1370px;}
+    100%{left:-2px;}
 }
 .btn{   
     position: absolute;
@@ -83,4 +90,19 @@
     background-color: blueviolet;
     margin-top: 350px;
     margin-left: 590px;  
+}
+#texto{
+    
+    text-align: center;
+    text-shadow:5px 5px 5px black;
+    font-size: 54pt;
+    color: blueviolet;
+    font-weight: 7%;
+}
+#texto2{
+    position: fixed;
+    text-shadow:5px 5px 5px black;
+    font-size: 54pt;
+    color: blueviolet;
+    font-weight: 7%;
 }
